@@ -1,0 +1,50 @@
+{
+  "name": "caseflow-app",
+  "private": true,
+  "license": "UNLICENSED",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "oxfmt",
+    "typecheck": "tsc --noEmit",
+    "api:serve": "php -d upload_max_filesize=10M -d post_max_size=12M -S 127.0.0.1:8000 -t ../backend/public ../backend/public/index.php",
+    "api:test": "php ../backend/tests/run.php && php ../backend/tests/transactions.php && node ../backend/tests/http.mjs",
+    "api:test:mysql": "php ../backend/tests/mysql.php",
+    "test:render": "node tests/frontend-smoke.mjs",
+    "test:routing": "vitest run --config vitest.config.ts",
+    "test:spa": "node tests/spa-fallback.mjs",
+    "test": "npm run test:routing && npm run test:render && npm run test:spa",
+    "test:responsive": "node tests/responsive.mjs",
+    "test:dashboard-scroll": "node tests/dashboard-scroll.mjs",
+    "test:workflow": "node tests/workflow.mjs"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.18.4",
+    "recharts": "^3.10.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.0",
+    "jsdom": "^28.1.0",
+    "oxfmt": "^0.2.0",
+    "playwright": "^1.63.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^8.0.5",
+    "vitest": "^5.0.1"
+  },
+  "description": "CaseFlow — Customer Service & Case Management System",
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

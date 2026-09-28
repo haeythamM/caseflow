@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-light: #eff6ff;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+*:hover {
+  scrollbar-color: #d1d5db transparent;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: var(--font-body);
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+button:disabled { opacity: .55; cursor: not-allowed; }
+main[data-density="compact"] td { padding-top: .5rem; padding-bottom: .5rem; }
+main[data-density="spacious"] td { padding-top: 1.25rem; padding-bottom: 1.25rem; }

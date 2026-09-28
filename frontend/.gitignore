@@ -1,0 +1,26 @@
+node_modules/
+dist/
+build/
+.cache/
+.env*
+.vite/
+vite.config.*.timestamp-*
+*.tsbuildinfo
+*-debug.log*
+logs/
+*.log
+.tmp-*
+
+# Local tooling files
+/.plugins/
+/.opencode-skills/
+
+# Local responsive browser audit evidence
+/.responsive-*/
+
+# Private configuration and historical delivery copies
+.env*
+!.env.example
+/submission/
+/legacy/
+*.log

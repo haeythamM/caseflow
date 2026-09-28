@@ -1,0 +1,41 @@
+# Dependencies and generated output
+**/node_modules/
+**/vendor/
+**/dist/
+**/build/
+**/.cache/
+**/.vite/
+*.tsbuildinfo
+
+# Private runtime/configuration data
+.env*
+**/.env*
+!**/.env.example
+*.log
+*.sqlite*
+*.db
+*.pem
+*.key
+**/storage/**
+!**/storage/.gitkeep
+
+# Historical deliveries and local tooling are not portfolio source
+**/submission/
+**/legacy/
+**/.responsive-*/
+**/.vscode/
+**/.DS_Store
+showcase/
+*.zip
+
+# Verification scratch data, database servers and browser output
+.local-verification/
+**/coverage/
+**/test-results/
+**/playwright-report/
+**/.phpunit.cache/
+**/.phpunit.result.cache
+**/Thumbs.db
+**/Desktop.ini
+*.bak
+*.dump

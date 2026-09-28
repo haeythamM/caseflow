@@ -1,0 +1,13 @@
+/storage/*
+!/storage/.gitkeep
+/legacy/sqlite/data/*
+!/legacy/sqlite/data/.gitkeep
+/.env
+/vendor/
+
+# Private configuration and historical delivery copies
+.env*
+!.env.example
+/submission/
+/legacy/
+*.log

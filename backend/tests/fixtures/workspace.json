@@ -1,0 +1,371 @@
+{
+  "agents": [
+    "Demo Agent One",
+    "Demo Agent Two",
+    "Demo Agent Three",
+    "Demo Agent Four",
+    "Demo Agent Five"
+  ],
+  "caseActivities": {
+    "CASE-1042": [
+      {
+        "id": "a1",
+        "type": "created",
+        "text": "Case opened by SampleOne Customer via customer portal.",
+        "agent": "System",
+        "date": "2024-11-28 08:14"
+      },
+      {
+        "id": "a2",
+        "type": "assigned",
+        "text": "Assigned to Demo Agent One (Technical Support).",
+        "agent": "Demo Agent Two",
+        "date": "2024-11-28 08:30"
+      },
+      {
+        "id": "a3",
+        "type": "communication",
+        "text": "Initial diagnostic questions sent to customer via email.",
+        "agent": "Demo Agent One",
+        "date": "2024-11-28 09:00"
+      },
+      {
+        "id": "a4",
+        "type": "note",
+        "text": "Checked server logs — 502s correlating with spikes in p99 latency on the /orders upstream. Likely load balancer timeout. Escalating to infra.",
+        "agent": "Demo Agent One",
+        "date": "2024-11-29 11:22"
+      },
+      {
+        "id": "a5",
+        "type": "status_change",
+        "text": "Status changed from Open → In Progress.",
+        "agent": "Demo Agent One",
+        "date": "2024-11-29 11:25"
+      },
+      {
+        "id": "a6",
+        "type": "communication",
+        "text": "Customer reported errors still occurring but less frequent.",
+        "agent": "SampleOne Customer",
+        "date": "2024-11-29 09:31"
+      },
+      {
+        "id": "a7",
+        "type": "note",
+        "text": "Infrastructure fix deployed. Monitoring error rate for 24 hours before resolving.",
+        "agent": "Demo Agent One",
+        "date": "2024-11-30 14:00"
+      },
+      {
+        "id": "a8",
+        "type": "communication",
+        "text": "Update sent to customer: root cause identified, fix deployed.",
+        "agent": "Demo Agent One",
+        "date": "2024-11-30 14:22"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "CASE-1042",
+      "customerId": "CUST-001",
+      "customerName": "SampleOne Customer",
+      "subject": "API integration returning 502 errors",
+      "category": "Technical",
+      "description": "Customer reports intermittent 502 Bad Gateway errors when calling the /orders endpoint during peak hours. Affects production systems.",
+      "assignedAgent": "Demo Agent One",
+      "priority": "Urgent",
+      "status": "In Progress",
+      "createdDate": "2024-11-28",
+      "lastUpdated": "2024-11-30"
+    },
+    {
+      "id": "CASE-1041",
+      "customerId": "CUST-008",
+      "customerName": "SampleEight Customer",
+      "subject": "Invoice discrepancy — October statement",
+      "category": "Billing",
+      "description": "Invoice #INV-2024-1041 shows charges for 5 seats but account is licensed for 3. Requesting credit.",
+      "assignedAgent": "Demo Agent Two",
+      "priority": "High",
+      "status": "Pending",
+      "createdDate": "2024-11-26",
+      "lastUpdated": "2024-11-29"
+    },
+    {
+      "id": "CASE-1040",
+      "customerId": "CUST-002",
+      "customerName": "SampleTwo Customer",
+      "subject": "SSO login loop — G-Suite users",
+      "category": "Technical",
+      "description": "Users authenticated through Google Workspace encounter an infinite redirect loop on the SSO callback.",
+      "assignedAgent": "Demo Agent One",
+      "priority": "High",
+      "status": "Open",
+      "createdDate": "2024-11-25",
+      "lastUpdated": "2024-11-25"
+    },
+    {
+      "id": "CASE-1039",
+      "customerId": "CUST-006",
+      "customerName": "SampleSix Customer",
+      "subject": "Export to CSV not including custom fields",
+      "category": "Feature Request",
+      "description": "The CSV export tool omits custom fields added via the field builder. These are required for their internal reporting pipeline.",
+      "assignedAgent": "Demo Agent Three",
+      "priority": "Medium",
+      "status": "Open",
+      "createdDate": "2024-11-24",
+      "lastUpdated": "2024-11-26"
+    },
+    {
+      "id": "CASE-1038",
+      "customerId": "CUST-004",
+      "customerName": "SampleFour Customer",
+      "subject": "Account locked — unable to reset password",
+      "category": "Account Access",
+      "description": "User cannot receive password reset emails. IT confirmed the domain is not blocking our sender. Account shows 5 failed attempts.",
+      "assignedAgent": "Demo Agent Two",
+      "priority": "Medium",
+      "status": "Resolved",
+      "createdDate": "2024-11-20",
+      "lastUpdated": "2024-11-22"
+    },
+    {
+      "id": "CASE-1037",
+      "customerId": "CUST-003",
+      "customerName": "SampleThree Customer",
+      "subject": "Webhook events delayed by 15–20 minutes",
+      "category": "Technical",
+      "description": "Webhook events for order.completed are arriving with consistent delay. Checking queue backlog and consumer health.",
+      "assignedAgent": "Demo Agent One",
+      "priority": "High",
+      "status": "Resolved",
+      "createdDate": "2024-11-18",
+      "lastUpdated": "2024-11-21"
+    },
+    {
+      "id": "CASE-1036",
+      "customerId": "CUST-005",
+      "customerName": "SampleFive Customer",
+      "subject": "Onboarding — data import assistance",
+      "category": "Onboarding",
+      "description": "New customer needs help importing 4,200 legacy records from their old CRM (Salesforce export).",
+      "assignedAgent": "Demo Agent Three",
+      "priority": "Low",
+      "status": "Closed",
+      "createdDate": "2024-11-14",
+      "lastUpdated": "2024-11-19"
+    },
+    {
+      "id": "CASE-1035",
+      "customerId": "CUST-007",
+      "customerName": "SampleSeven Customer",
+      "subject": "French locale formatting errors on invoices",
+      "category": "Localization",
+      "description": "Invoice amounts display with incorrect decimal separators for French locale (using . instead of ,).",
+      "assignedAgent": "Demo Agent Three",
+      "priority": "Medium",
+      "status": "In Progress",
+      "createdDate": "2024-11-22",
+      "lastUpdated": "2024-11-28"
+    }
+  ],
+  "categories": [
+    "Technical",
+    "Billing",
+    "Account Access",
+    "Feature Request",
+    "Onboarding",
+    "Localization",
+    "General Inquiry"
+  ],
+  "communications": [
+    {
+      "id": "COMM-501",
+      "customerId": "CUST-001",
+      "customerName": "SampleOne Customer",
+      "caseId": "CASE-1042",
+      "type": "Email",
+      "subject": "Re: API 502 errors — diagnostic results",
+      "body": "Hi SampleOne, we've identified the root cause as an upstream timeout issue in the load balancer configuration. Our infrastructure team is deploying a fix now. You should see improvement within 2 hours.",
+      "agent": "Demo Agent One",
+      "date": "2024-11-30 14:22"
+    },
+    {
+      "id": "COMM-500",
+      "customerId": "CUST-008",
+      "customerName": "SampleEight Customer",
+      "caseId": "CASE-1041",
+      "type": "Phone",
+      "subject": "Invoice review call",
+      "body": "Spoke with SampleEight for 12 minutes. Confirmed the billing discrepancy. Agreed to issue credit memo for 2 seats × $149 = $298. Escalated to finance.",
+      "agent": "Demo Agent Two",
+      "date": "2024-11-29 10:05"
+    },
+    {
+      "id": "COMM-499",
+      "customerId": "CUST-001",
+      "customerName": "SampleOne Customer",
+      "caseId": "CASE-1042",
+      "type": "Customer Message",
+      "subject": "502 errors still occurring",
+      "body": "We're still seeing errors on our end. The frequency has reduced but it's still happening. Please advise.",
+      "agent": "SampleOne Customer",
+      "date": "2024-11-29 09:31"
+    },
+    {
+      "id": "COMM-498",
+      "customerId": "CUST-002",
+      "customerName": "SampleTwo Customer",
+      "caseId": "CASE-1040",
+      "type": "Internal Note",
+      "subject": "Checking auth callback config",
+      "body": "Reviewed the OAuth callback URL registered for SampleTwo's tenant. The redirect URI has a trailing slash mismatch vs what's configured in Google Workspace. Testing fix in staging.",
+      "agent": "Demo Agent One",
+      "date": "2024-11-25 16:44"
+    },
+    {
+      "id": "COMM-497",
+      "customerId": "CUST-007",
+      "customerName": "SampleSeven Customer",
+      "caseId": "CASE-1035",
+      "type": "Email",
+      "subject": "Locale fix update",
+      "body": "Bonjour SampleSeven, we've pushed a patch to fix the decimal separator in the fr-FR locale. Please regenerate an invoice and confirm whether the formatting is correct.",
+      "agent": "Demo Agent Three",
+      "date": "2024-11-28 11:15"
+    }
+  ],
+  "customers": [
+    {
+      "id": "CUST-001",
+      "firstName": "SampleOne",
+      "lastName": "Customer",
+      "email": "customer1@example.test",
+      "phone": "+1 (202) 555-0101",
+      "address": "1 Example Lane",
+      "city": "Demo City",
+      "province": "",
+      "postalCode": "",
+      "country": "Demo Region",
+      "notes": "Enterprise account — key stakeholder is SampleOne's IT director.",
+      "status": "Active",
+      "createdDate": "2024-03-12",
+      "casesCount": 5
+    },
+    {
+      "id": "CUST-002",
+      "firstName": "SampleTwo",
+      "lastName": "Customer",
+      "email": "customer2@example.test",
+      "phone": "+1 (202) 555-0102",
+      "address": "2 Example Lane",
+      "city": "Demo City",
+      "province": "",
+      "postalCode": "",
+      "country": "Demo Region",
+      "notes": "Prefers email. Do not call before 9am EST.",
+      "status": "Active",
+      "createdDate": "2024-05-08",
+      "casesCount": 3
+    },
+    {
+      "id": "CUST-003",
+      "firstName": "SampleThree",
+      "lastName": "Customer",
+      "email": "customer3@example.test",
+      "phone": "+1 (202) 555-0103",
+      "address": "3 Example Lane",
+      "city": "Demo City",
+      "province": "",
+      "postalCode": "",
+      "country": "Demo Region",
+      "notes": "",
+      "status": "Active",
+      "createdDate": "2024-06-21",
+      "casesCount": 2
+    },
+    {
+      "id": "CUST-004",
+      "firstName": "SampleFour",
+      "lastName": "Customer",
+      "email": "customer4@example.test",
+      "phone": "+1 (202) 555-0104",
+      "address": "4 Example Lane",
+      "city": "Demo City",
+      "province": "",
+      "postalCode": "",
+      "country": "Demo Region",
+      "notes": "Billing disputes only — escalate to finance team.",
+      "status": "Inactive",
+      "createdDate": "2023-11-03",
+      "casesCount": 7
+    },
+    {
+      "id": "CUST-005",
+      "firstName": "SampleFive",
+      "lastName": "Customer",
+      "email": "customer5@example.test",
+      "phone": "+1 (202) 555-0105",
+      "address": "5 Example Lane",
+      "city": "Demo City",
+      "province": "",
+      "postalCode": "",
+      "country": "Demo Region",
+      "notes": "",
+      "status": "Active",
+      "createdDate": "2024-08-15",
+      "casesCount": 1
+    },
+    {
+      "id": "CUST-006",
+      "firstName": "SampleSix",
+      "lastName": "Customer",
+      "email": "customer6@example.test",
+      "phone": "+1 (202) 555-0106",
+      "address": "6 Example Lane",
+      "city": "Demo City",
+      "province": "",
+      "postalCode": "",
+      "country": "Demo Region",
+      "notes": "Time zone: CET. Responded well to proactive updates.",
+      "status": "Active",
+      "createdDate": "2024-01-30",
+      "casesCount": 4
+    },
+    {
+      "id": "CUST-007",
+      "firstName": "SampleSeven",
+      "lastName": "Customer",
+      "email": "customer7@example.test",
+      "phone": "+1 (202) 555-0107",
+      "address": "7 Example Lane",
+      "city": "Demo City",
+      "province": "",
+      "postalCode": "",
+      "country": "Demo Region",
+      "notes": "NGO client — non-profit pricing applied.",
+      "status": "Active",
+      "createdDate": "2024-04-17",
+      "casesCount": 2
+    },
+    {
+      "id": "CUST-008",
+      "firstName": "SampleEight",
+      "lastName": "Customer",
+      "email": "customer8@example.test",
+      "phone": "+1 (202) 555-0108",
+      "address": "8 Example Lane",
+      "city": "Demo City",
+      "province": "",
+      "postalCode": "",
+      "country": "Demo Region",
+      "notes": "High-value client. Response SLA: 4 hours.",
+      "status": "Suspended",
+      "createdDate": "2023-09-25",
+      "casesCount": 9
+    }
+  ]
+}

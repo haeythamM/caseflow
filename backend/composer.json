@@ -1,0 +1,23 @@
+{
+  "name": "caseflow/api",
+  "description": "CaseFlow PHP API with PDO MySQL data access",
+  "type": "project",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.0",
+    "ext-mbstring": "*",
+    "ext-fileinfo": "*",
+    "ext-pdo": "*",
+    "ext-pdo_mysql": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "CaseFlow\\": "src/"
+    }
+  },
+  "scripts": {
+    "serve": "php -d upload_max_filesize=10M -d post_max_size=12M -S 127.0.0.1:8000 -t public public/index.php",
+    "test": "php tests/run.php && php tests/transactions.php",
+    "test:mysql": "php tests/mysql.php"
+  }
+}
